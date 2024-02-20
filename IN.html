@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+class Officer{
+
+    constructor(id, name, dob, room, hs){
+        this.id = id;
+        this.name = name;
+        this.dob = dob;
+        this.room = room;
+        this.hs = hs;
+    }
+
+    present(){
+        return this.id + ' ' + this.name + ' ' + this.dob + ' ' + this.room + ' ' + this.hs;
+    }
+}
+
+let n = prompt("Nhap so luong nhan vien");
+for (let i = 0; i < n; i++){
+	const o = new Officer(prompt("Ma nhan vien"),prompt("Ho va ten"), prompt("Ngay sinh"), prompt("Phong ban"), prompt("He so luong"));
+    document.getElementById("demo").innerHTML = o.present() + '\n';
+}
+</script>
+
+</body>
+</html>
